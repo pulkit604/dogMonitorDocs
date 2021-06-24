@@ -319,21 +319,21 @@
 							agent on
 							default-agent
 							
-							Then we found out the MAC address and could connect the device.
-							pair xx:xx:xx:xx:xx:xx
-							trust xx:xx:xx:xx:xx:xx
+							Then we found out the MAC address and could connect the device.<br>
+							pair xx:xx:xx:xx:xx:xx<br>
+							trust xx:xx:xx:xx:xx:xx<br>
 							connect xx:xx:xx:xx:xx<br><br>
 							
 							3. A2DP support<br>
 							After the connection to the device was established, the A2DP Bluetooth profile had to be set up to realize the sound output. 
 							
-							For this the Bluetooth sound card had to be listed. 
-							pacmd list-cards 
+							For this the Bluetooth sound card had to be listed: <br>
+							pacmd list-cards <br>
 							
-							The Bluetooth sound card was on index #1 and now we had to enable A2DP.
-							pacmd set-card-profile bluez_card.xx_xx_xx_xx_xx a2dp_sink
+							The Bluetooth sound card was on index #1 and now we had to enable A2DP:<br>
+							pacmd set-card-profile bluez_card.xx_xx_xx_xx_xx a2dp_sink<br>
 							
-							After that we had to set the speaker as output audio.
+							After that we had to set the speaker as output audio:<br>
 							pacmd set-default-sink bluez_sink.xx_xx_xx_xx_xx.a2dp_sink</p>
 							<figure class="figure docs-figure py-1">
 								<a href="assets/images/anker.jpg" data-title="Anker Soundcore 2"
@@ -346,12 +346,14 @@
 
 					<section class="docs-section" id="item-2-3">
 						<h2 class="section-heading">Gyvazla USB-microphone</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
-							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
-							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
-							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
-							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<p>The microphone could be set up easily via a USB interface.</p>
 					</section>
+					<figure class="figure docs-figure py-1">
+						<a href="assets/images/microphone.jpg" data-title="Gyvazla USB-microphone"
+							data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+								src="assets/images/microphone.jpg#" alt="" style="width: 200px;"></a>
+						<figcaption class="figure-caption mt-3"></i>Gyvazla USB-microphone</figcaption>
+					</figure>
 					<!--//section-->
 				</article>
 				<!--//docs-article-->
