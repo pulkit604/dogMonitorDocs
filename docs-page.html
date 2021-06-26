@@ -115,6 +115,14 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Section Item 7.1</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Section Item 7.2</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-3">Section Item 7.3</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span
+							class="theme-icon-holder mr-2"><i class="fas fa-tablet-alt"></i></span>Python Scripts</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">Audioset Downloader</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">Bitrate Converter</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Crop From Timestamp</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">Set Mono Sound Channel</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-5">Strip to 9 Seconds</a></li>
 				</ul>
 
 			</nav>
@@ -189,9 +197,9 @@
 							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
 
 
-						
+
 						<!--//table-responsive-->
-						
+
 						<!--//table-responsive-->
 						<!--//table-responsive-->
 
@@ -262,10 +270,10 @@
 									aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
 						</div> -->
-					
+
 					<!--//section-->
 
-	
+
 					<!--//section-->
 					<!--//section-->
 
@@ -310,29 +318,29 @@
 						<p>The Anker Soundcore 2 was used here to play the soothing music. A connection to the device was established via Bluetooth. In order for the speaker to work, it is necessary to perform a few configurations here. <br> <br>
 							1. PulseAudio<br>
 							PulseAudio is a network-capable sound server program distributed via the freedesktop.org project. It runs mainly on Linux, various BSD distributions such as FreeBSD and OpenBSD, macOS, as well as Illumos distributions and the Solaris operating system. (https://wiki.debian.org/PulseAudio)<br><br>
-							
+
 							2. bluetooth connection<br>
 							To establish a connection to the device the following steps had to be performed:
-							
+
 							bluetoothctl
 							power on
 							agent on
 							default-agent
-							
+
 							Then we found out the MAC address and could connect the device.<br>
 							pair xx:xx:xx:xx:xx:xx<br>
 							trust xx:xx:xx:xx:xx:xx<br>
 							connect xx:xx:xx:xx:xx<br><br>
-							
+
 							3. A2DP support<br>
-							After the connection to the device was established, the A2DP Bluetooth profile had to be set up to realize the sound output. 
-							
+							After the connection to the device was established, the A2DP Bluetooth profile had to be set up to realize the sound output.
+
 							For this the Bluetooth sound card had to be listed: <br>
 							pacmd list-cards <br>
-							
+
 							The Bluetooth sound card was on index #1 and now we had to enable A2DP:<br>
 							pacmd set-card-profile bluez_card.xx_xx_xx_xx_xx a2dp_sink<br>
-							
+
 							After that we had to set the speaker as output audio:<br>
 							pacmd set-default-sink bluez_sink.xx_xx_xx_xx_xx.a2dp_sink</p>
 							<figure class="figure docs-figure py-1">
@@ -369,7 +377,7 @@
 					</header>
 					<section class="docs-section" id="item-3-1">
 						<h2 class="section-heading">Python</h2>
-						<p>Python is a ...... . We decided to use Python for our project since there were various technologies to be used in the project. Since, it is not feasible to use different programming languages for one project that need to be interpolated with different techniques. </p>
+						<p>Python is a programming language that lets you work more quickly and integrate your systems more effectively <a href="https://www.python.org/">[1]</a> We decided to use Python for our project since there were various technologies to be used in the project. Since, it is not feasible to use different programming languages for one project that need to be interpolated with different techniques. </p>
 					</section>
 					<!--//section-->
 
@@ -569,7 +577,64 @@
 				</article>
 				<!--//docs-article-->
 
+				<article class="docs-article" id="section-8">
+					<header class="docs-header">
+						<h1 class="docs-heading">Python Scripts</h1>
+						<section class="docs-intro">
+							<p>A bunch of python scripts were modified and written for various use cases ranging from downloading youtube videos to stripping audio files to a certain timestamp. </p>
+						</section>
+						<!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-8-1">
+						<h2 class="section-heading">Section Item 7.1</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
+							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
+							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
+							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
+							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section>
+					<!--//section-->
 
+					<section class="docs-section" id="item-8-2">
+						<h2 class="section-heading">Section Item 7.2</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
+							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
+							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
+							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
+							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-8-3">
+						<h2 class="section-heading">Section Item 7.3</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
+							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
+							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
+							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
+							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-8-4">
+						<h2 class="section-heading">Section Item 7.3</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
+							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
+							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
+							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
+							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-8-5">
+						<h2 class="section-heading">Section Item 7.3</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
+							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
+							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
+							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
+							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section>
+					<!--//section-->
+				</article>
 
 				<footer class="footer">
 					<div class="container text-center py-5">
