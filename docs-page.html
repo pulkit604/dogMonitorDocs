@@ -479,9 +479,17 @@
 
 					<section class="docs-section" id="item-5-2">
 						<h2 class="section-heading">Microphone Setup</h2>
-						<p>For our project we required a microphone to record the sound from a dog. The first attempt was made with a <a href="https://www.reichelt.de/de/de/entwicklerboards-soundmodul-rec-play-isd1820-debo-soundmodule-p202833.html?PROVID=2788&gclid=Cj0KCQjw38-DBhDpARIsADJ3kjn3cWooO6GfgpjUUjv-k1GHM9vKwKvv_Hs7yTnkPsliDyREm5ZtnIUaAqvdEALw_wcB&&r=1">sound module</a>
+						<p>For our project we required a microphone to record the sound from a dog. The first attempt was made with a sound module.
 						Upon inspecting it was found out that there isn't a possibility of saving the audio recorded from the microphone and it can only play audio on the go. Since, our use case required us to save the audio file for sending it to the api to analyse the sound, we decided to look for some other device.
-						Next, we </p>
+						</p>
+						<figure class="figure docs-figure py-3">
+							<a href="https://www.reichelt.de/de/de/entwicklerboards-soundmodul-rec-play-isd1820-debo-soundmodule-p202833.html?PROVID=2788&gclid=Cj0KCQjw38-DBhDpARIsADJ3kjn3cWooO6GfgpjUUjv-k1GHM9vKwKvv_Hs7yTnkPsliDyREm5ZtnIUaAqvdEALw_wcB&&r=1"><img
+									class="figure-img img-fluid shadow rounded"
+									src="assets/images/somd.jpeg" alt=""
+									style="width: 300px;"></a>
+							<figcaption class="figure-caption mt-3"></i></figcaption>
+						</figure>
+						<p>Next, we tried to setup the Bluetooth Device mentioned above.</p>
 					</section>
 					<!--//section-->
 
@@ -492,6 +500,7 @@
 							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
 							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
 							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<iframe src="https://drive.google.com/file/d/1CwaA-6nu6auzz_elji_-Rdzjv02vYGK_/preview" width="640" height="480" allow="autoplay"></iframe>
 					</section>
 					<!--//section-->
 
@@ -503,7 +512,11 @@
 
 					<section class="docs-section" id="item-5-5">
 						<h2 class="section-heading">Test Api Structure</h2>
-						<p></p>
+						<p>To have an idea of how the Dog sound classifier would analyse and respond to an audio file, a test api was created using <a href="https://testapi.io/">https://testapi.io/</a>
+							Responses:<br>When the sound classifies as one of separation anxity: <a href="https://testapi.io/api/pulkit604/dog_sound_classify">https://testapi.io/api/pulkit604/dog_sound_classify
+							</a><br>Output: { result: true }<br>When the sound doesn't classify as one of separation anxity:  <a href="https://testapi.io/api/pulkit604/dog_sound_classify_1">https://testapi.io/api/pulkit604/dog_sound_classify_1
+							</a><br>Output: { result: false }
+						</p>
 					</section>
 					<!--//section-->
 				</article>
