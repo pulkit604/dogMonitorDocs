@@ -101,9 +101,11 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Section Item 4.3</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
 								class="theme-icon-holder mr-2"><i class="fas fa-desktop"></i></span>Demo 1</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Section Item 5.1</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Section Item 5.2</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">Section Item 5.3</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Setting up Raspberry</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Microphone Setup</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">Audio Output</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-4">Data collection for Tensorflow</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-5">Test Api Structure</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span
 								class="theme-icon-holder mr-2"><i class="fas fa-desktop"></i></span>Demo 2</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">Section Item 6.1</a></li>
@@ -124,6 +126,8 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">Crop From Timestamp</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-5">Set Mono Sound Channel</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-6">Strip to 9 Seconds</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-7">Flask server</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-8">Final script for raspberry pi</a></li>
 				</ul>
 
 			</nav>
@@ -473,7 +477,7 @@
 					</header>
 					<section class="docs-section" id="item-5-1">
 						<h2 class="section-heading">Setting up Raspberry</h2>
-						<p>Raspberry Pi 4 with Uiwas setup for the project. Vnc viewer was used to access the UI.
+						<p>Raspberry Pi 4 with Ui was setup for the project. Vnc viewer was used to access the UI.
 						</p>
 					</section>
 					<!--//section-->
@@ -490,31 +494,27 @@
 									style="width: 300px;"></a>
 							<figcaption class="figure-caption mt-3"></i></figcaption>
 						</figure>
-						<p>Next, we tried to setup the Bluetooth Device mentioned above.</p>
+						<p>Next, we tried to setup the Bluetooth Device mentioned <a href="#item-2-2">above.</a> The function was successful but considering our project it wouldn't have been optimal to choose the device because we required to record sound and also play music simultaneously. The issue was that there needs to made a protocol switch on the device for playing and recording;  <a href="https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Headset_Profile_(HSP)">HSP</a> and <a href="https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Advanced_Audio_Distribution_Profile_(A2DP)">A2DP</a> protocols. </p>
 					</section>
 					<!--//section-->
 
 					<section class="docs-section" id="item-5-3">
 						<h2 class="section-heading">Audio Output</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
-							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
-							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
-							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
-							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<p>We were able to connect our bluetooth sound speaker to our raspberrypi. Following is a video showing the audio output from the raspberry to the bluetooth speaker.</p>
 						<iframe src="https://drive.google.com/file/d/1CwaA-6nu6auzz_elji_-Rdzjv02vYGK_/preview" width="640" height="480" allow="autoplay"></iframe>
 					</section>
 					<!--//section-->
 
 					<section class="docs-section" id="item-5-4">
 						<h2 class="section-heading">Data collection for Tensorflow</h2>
-						<p></p>
+						<p>For generating a model to classify audio we required to collect different sounds which correspond to the sounds that dogs make. We used the dataset by <a href="https://research.google.com/audioset/ontology/dog_1.html">research.google.com</a><br>On every category page, we grabbed the json response which contained the audio files with timestamps.<br>For example, <a href="https://storage.googleapis.com/audioset_website_data/youtube_corpus/v1/balanced_train/bark/1.js">https://storage.googleapis.com/audioset_website_data/youtube_corpus/v1/balanced_train/bark/1.js</a> gives a json response. We wrote a small javascript to take that response and give a list directly copeable into an <a href="https://docs.google.com/spreadsheets/d/1aNIikUhNj3v6oarXHSIENYtTNHg-NxNrSj4HN4miZZc/edit#gid=0">excel sheet</a></p>
 					</section>
 					<!--//section-->
 
 					<section class="docs-section" id="item-5-5">
 						<h2 class="section-heading">Test Api Structure</h2>
 						<p>To have an idea of how the Dog sound classifier would analyse and respond to an audio file, a test api was created using <a href="https://testapi.io/">https://testapi.io/</a>
-							Responses:<br>When the sound classifies as one of separation anxity: <a href="https://testapi.io/api/pulkit604/dog_sound_classify">https://testapi.io/api/pulkit604/dog_sound_classify
+							<br>Responses:<br><br>When the sound classifies as one of separation anxity: <a href="https://testapi.io/api/pulkit604/dog_sound_classify">https://testapi.io/api/pulkit604/dog_sound_classify
 							</a><br>Output: { result: true }<br>When the sound doesn't classify as one of separation anxity:  <a href="https://testapi.io/api/pulkit604/dog_sound_classify_1">https://testapi.io/api/pulkit604/dog_sound_classify_1
 							</a><br>Output: { result: false }
 						</p>
@@ -657,6 +657,20 @@
 						<h2 class="section-heading">Strip to 9 Seconds</h2>
 						<p>There was a problem when generating the audio files to spectrogram images, that the images need to be of the same dimensions when training the model. Thus, the below script makes it possible to strip the audio files to the same duration of 9 seconds. </p>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/strip_9_sec.py"></script>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-8-7">
+						<h2 class="section-heading">Flask server</h2>
+						<p>There was a problem when generating the audio files to spectrogram images, that the images need to be of the same dimensions when training the model. Thus, the below script makes it possible to strip the audio files to the same duration of 9 seconds. </p>
+						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/flask_app.py"></script>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-8-8">
+						<h2 class="section-heading">Final script for raspberry pi</h2>
+						<p>There was a problem when generating the audio files to spectrogram images, that the images need to be of the same dimensions when training the model. Thus, the below script makes it possible to strip the audio files to the same duration of 9 seconds. </p>
+						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/all_in_one.py"></script>
 					</section>
 					<!--//section-->
 				</article>
