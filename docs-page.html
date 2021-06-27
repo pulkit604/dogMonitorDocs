@@ -118,11 +118,12 @@
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span
 							class="theme-icon-holder mr-2"><i class="fas fa-tablet-alt"></i></span>Python Scripts</a>
 					</li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">Audioset Downloader</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">Bitrate Converter</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Crop From Timestamp</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">Set Mono Sound Channel</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-5">Strip to 9 Seconds</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">Audio classifier Model</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">Audioset Downloader</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Bitrate Converter</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">Crop From Timestamp</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-5">Set Mono Sound Channel</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-6">Strip to 9 Seconds</a></li>
 				</ul>
 
 			</nav>
@@ -619,34 +620,40 @@
 						<!--//docs-intro-->
 					</header>
 					<section class="docs-section" id="item-8-1">
+						<h2 class="section-heading">Audio classifier Model</h2>
+						<p>The below jupyter lab contains the modified code to load audio files and generate a classifier model to distinguish b/w dog related separation anxiety sound </p>
+						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/audioset-downloader.py"></script>
+					</section>
+					<!--//section-->
+					<section class="docs-section" id="item-8-2">
 						<h2 class="section-heading">Audioset Downloader</h2>
 						<p>The below script reads an excel file with youtube video links and fetches audio files for that and saves to folders like Bark, Yip, etc. </p>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/audioset-downloader.py"></script>
 					</section>
 					<!--//section-->
 
-					<section class="docs-section" id="item-8-2">
+					<section class="docs-section" id="item-8-3">
 						<h2 class="section-heading">Bitrate Converter</h2>
 						<p>The below script takes audio files and converts them a bitrate of 16.</p>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/bitrate_convert.py"></script>
 					</section>
 					<!--//section-->
 
-					<section class="docs-section" id="item-8-3">
+					<section class="docs-section" id="item-8-4">
 						<h2 class="section-heading">Crop From Timestamp</h2>
 						<p>The below script takes audio files and crops them to the start and endtimestamp mentioned in the file name like _fTONy_pqik_start_[start_timestamp]_end_[end_timestamp].wav</p>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/crop_from_timestamp.py"></script>
 					</section>
 					<!--//section-->
 
-					<section class="docs-section" id="item-8-4">
+					<section class="docs-section" id="item-8-5">
 						<h2 class="section-heading">Set Mono Sound Channel</h2>
 						<p>To work with the model it was required that the audio files be single channel audio files. The below script does that function.</p>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/set_sound_channel_mono.py"></script>
 					</section>
 					<!--//section-->
 
-					<section class="docs-section" id="item-8-5">
+					<section class="docs-section" id="item-8-6">
 						<h2 class="section-heading">Strip to 9 Seconds</h2>
 						<p>There was a problem when generating the audio files to spectrogram images, that the images need to be of the same dimensions when training the model. Thus, the below script makes it possible to strip the audio files to the same duration of 9 seconds. </p>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/strip_9_sec.py"></script>
