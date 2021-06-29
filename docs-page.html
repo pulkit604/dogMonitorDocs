@@ -417,7 +417,7 @@
 
 					<section class="docs-section" id="item-3-3">
 						<h2 class="section-heading">Firebase Cloud Messaging</h2>
-						<p>Firebase Cloud Messaging is a feature available from Firebase which enables us to send push notifications across various devices once a device has been registered through a service worker. </p>
+						<p>Firebase Cloud Messaging is a feature available from Firebase which enables us to send push notifications across various devices once a device has been registered through a service worker. Some examples of push notifications are the ones that you get from various apps like facebook(getting a new friend request), amazon(order on the way, order dispatched), etc.</p>
 						<figure class="figure docs-figure py-3">
 							<a href="https://firebase.google.com/docs/cloud-messaging"
 								 data-title="Python" data-toggle="lightbox"><img
@@ -620,11 +620,29 @@
 
 					<section class="docs-section" id="item-6-8">
 						<h2 class="section-heading">Tensorflow model update</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
-							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
-							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
-							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
-							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<p>We tried a couple of existing models for our project but weren't successful with that. Here are two projects, that we tried:<br>
+							<a href="https://github.com/GianlucaPaolocci/Sound-classification-on-Raspberry-Pi-with-Tensorflow">Urban Sound Classfier Project Link</a>
+							<br><a href="https://teachablemachine.withgoogle.com/">Teachable Machine Project Link</a>
+						<br><br>Finally, we were able to find a model by tensorflow which was properly documented and was easy to possible to use our downloaded audio wav files with some modifications. <a href="https://www.tensorflow.org/tutorials/audio/simple_audio"><br>Project Link</a><br><br>
+							The model works by transforming the audio files into waveforms and then into spectrogram images. And when the model is trained from these images, it works on the concept of image classification by determining the similarity between the images of different categories/labels.
+							<br>Below are some results of waveforms and spectrograms from the different categories that we had from the dog audio dataset.
+							<br><figure class="figure docs-figure py-3">
+								<a href="assets/images/wave.png"
+									 data-title="Waveforms" data-toggle="lightbox"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/wave.png" alt=""
+										style="width: 400px;"></a>
+								<figcaption class="figure-caption mt-3"></i>Waveforms</figcaption>
+							</figure>
+							<br><figure class="figure docs-figure py-3">
+								<a href="assets/images/spec.png"
+									 data-title="Spectrograms" data-toggle="lightbox"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/spec.png" alt=""
+										style="width: 400px;"></a>
+								<figcaption class="figure-caption mt-3"></i>Spectrograms</figcaption>
+							</figure>
+						</p>
 					</section>
 					<!--//section-->
 				</article>
@@ -756,6 +774,7 @@
 							<ul>
 								<li>If there can be added the factor of pitch from the audio files, it would be easier to have better accuracy since the sad sounds are generally told be of lower pitch than otherwise.</li>
 								<li>If there could be a dataset which consists of sounds without noise, it would be easier to get better results</li>
+								<li>Since, there exists a wide variety of breeds of dogs, the project could be expanded by grouping some breeds of dogs that make similar sounds</li>
 								<li>Since, there are similar situations with little kids and babies. If there exists or would exist a dataset of small children crying, the same project could be used just by altering the audio files and could be directly utilized.</li>
 							</ul>
 						</section>
