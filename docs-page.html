@@ -81,7 +81,7 @@
 								class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Introduction</a>
 					</li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Idea</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Use Case</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Software Architecture and Workflow</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
 								class="theme-icon-holder mr-2"><i class="fas fa-tools"></i></span>Tools and
 							Resources</a></li>
@@ -201,21 +201,20 @@
 					<!--//section-->
 
 					<section class="docs-section" id="item-1-2">
-						<h2 class="section-heading">Use Case</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
-							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
-							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
-							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
-							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-
-
-
-						<!--//table-responsive-->
-
-						<!--//table-responsive-->
-						<!--//table-responsive-->
-
-
+						<h2 class="section-heading">Software Architecture and Workflow</h2>
+						<p>Here is an overview of the Software architecture and Worflow of the project.</p>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/Workflow.png"
+								data-title="Raspberry Pi 4 Model B" data-toggle="lightbox"><img
+									class="figure-img img-fluid shadow rounded"
+									src="assets/images/Workflow.png" alt=""
+									style="width: 400px;"></a>
+						</figure>
+						<p>The Workflow of the project is as follows: </p>
+						<p>1. Here the noises of the dog are constantly listened to and stored via a microphone, which is connected to the Raspberry Pi. The sound recording is listened to and processed in the Raspberry Pi using Tensorflow, which is deployed on a Flask server.<br> </p>
+						<p>2. When an anxious behavior of the dog is classified, an API call is made and calming music for the dog is played through the Bluetooth speakers. </p>
+						<p>Steps 1 and 2 are repeated again if the dog is still making the sounds. </p>
+						<p>3. If the dog does not calm down, a push notification is sent to the dog owner's smartphone via Firebase Cloud Messaging, informing them that the dog is showing unusual behavior.</p>
 					</section>
 					<!--//section-->
 						<!-- <h5>Badges Examples:</h5>
