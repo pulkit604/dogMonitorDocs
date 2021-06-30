@@ -121,14 +121,14 @@
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span
 							class="theme-icon-holder mr-2"><i class="fas fa-file-code"></i></span>Python Scripts</a>
 					</li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Audio classifier Model</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Audioset Downloader</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-3">Bitrate Converter</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-4">Crop From Timestamp</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-5">Set Mono Sound Channel</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-6">Strip to 9 Seconds</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-7">Flask server</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-8">Final script for raspberry pi</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Audioset Downloader</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Bitrate Converter</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-3">Crop From Timestamp</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-4">Set Mono Sound Channel</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-5">Strip to 9 Seconds</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-6">Flask server</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-7">Final script for raspberry pi</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-8">Audio classifier Model</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span
 							class="theme-icon-holder mr-2"><i class="fas fa-microscope"></i></span>Observations and Future Scope</a>
 					</li>
@@ -188,13 +188,13 @@
 						<h2 class="section-heading">Idea</h2>
 						<p>This project is about the implementation of a Smart Dog Monitor. There are situations in
 							which a dog owner has to leave his dog alone and it suffers from separation anxiety or other
-							conspicuous behavior. For this problem this project was developed to monitor the behavior of
+							conspicuous behavior. To tackle this problem this project was developed to monitor the behavior of
 							the dog while he is alone at home. The Smart Dog Monitor is designed to detect the dog's
 							emotional state based on the sounds it makes (barking, growling, yelping, etc.) and play
 							calming music accordingly. If this calming music does not work, the dog owner will be
 							notified by a push notification on his cell phone. The detection of the emotional state is
-							done by a machine learning model that uses sound classification. The Raspberry PI was used
-							as the main device here. </p>
+							done by a machine learning model that works on the concept of sound classification. The Raspberry PI was used
+							as the main device here along with a usb microphone and a bluetooth speaker. </p>
 
 
 					</section>
@@ -295,16 +295,13 @@
 					<header class="docs-header">
 						<h1 class="docs-heading">Tools and Resources</h1>
 						<section class="docs-intro">
-							<p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-								finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit.
-								Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam
-								lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+							<p>The various tools that were used for the project are listed below:</p>
 						</section>
 						<!--//docs-intro-->
 					</header>
 					<section class="docs-section" id="item-2-1">
 						<h2 class="section-heading">Raspberry Pi 4 B</h2>
-						<p>The Raspberry Pi 4 was used as the main device here.</p>
+						<p>The Raspberry Pi 4 was used as the main device here. One of the major reason to choose a raspberry pi device was that we needed to use Tensorflow in our project for deep learning which is not widely available for micro-controllers but has recently been made compatible with certain models with high performance capabilities.</p>
 						<figure class="figure docs-figure py-3">
 							<a href="assets/images/Raspberry_Pi_4_Model_B_-_Side.jpeg"
 								data-title="Raspberry Pi 4 Model B" data-toggle="lightbox"><img
@@ -315,23 +312,37 @@
 						</figure>
 						<p>To be able to use it for our purpose, an OS had to be installed. Here, the decision fell on
 							Debian, since this operating system is compatible with most packages, has a certain
-							stability and requires little maintenance.</p>
+							stability and requires little maintenance.<br>
+						Specifications of the product are as follows:
+							<ul>
+						<li>1,5 GHz ARM Cortex-A72 Quad-Core-CPU</li>
+						<li>2 GB, 4 GB oder 8 GB LPDDR4 SDRAM</li>
+						<li>Gigabit LAN RJ45 (mit bis zu 1000 Mbit)</li>
+						<li>Bluetooth 5.0</li>
+						<li>2x USB 2.0 / 2x USB 3.0</li>
+						<li>2x microHDMI (1x 4k @60fps oder 2x 4k @30fps)</li>
+						<li>USB Type-C @ 5V/3A</li>
+					</ul></p>
 						<figure class="figure docs-figure py-1">
 							<a target="_blank" href="assets/images/debian.png" data-title="Debian OS on the Raspberry Pi"
 								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
 									src="assets/images/debian.png" alt="" style="width: 400px;"></a>
 							<figcaption class="figure-caption mt-3"></i>Debian OS on the Raspberry Pi</figcaption>
 						</figure>
+						<br><a href="https://www.reichelt.de/raspberry-pi-4-b-4x-1-5-ghz-4-gb-ram-wlan-bt-rasp-pi-4-b-4gb-p259920.html?PROVID=2788&gclid=CjwKCAjwieuGBhAsEiwA1Ly_ndLs584wlayJsFP7E4mjFMFl_Zt9R8Hok9QNIex4uIMitx-luINYgRoCoHkQAvD_BwE">Purchase Link</a>
 					</section>
 					<!--//section-->
 
 					<section class="docs-section" id="item-2-2">
 						<h2 class="section-heading">Anker Soundcore 2</h2>
 						<p>The Anker Soundcore 2 was used here to play the soothing music. A connection to the device was established via Bluetooth. In order for the speaker to work, it is necessary to perform a few configurations here. <br> <br>
-							1. PulseAudio<br>
-							PulseAudio is a network-capable sound server program distributed via the freedesktop.org project. It runs mainly on Linux, various BSD distributions such as FreeBSD and OpenBSD, macOS, as well as Illumos distributions and the Solaris operating system. (https://wiki.debian.org/PulseAudio)<br><br>
-
-							2. bluetooth connection<br>
+							<ol>
+						<li>
+							PulseAudio<br>
+							PulseAudio is a network-capable sound server program distributed via the freedesktop.org project. It runs mainly on Linux, various BSD distributions such as FreeBSD and OpenBSD, macOS, as well as Illumos distributions and the Solaris operating system. <a href="https://wiki.debian.org/PulseAudio">( PulseAudio Wiki )</a> <br><br>
+						</li>
+						<li>
+							Bluetooth connection<br>
 							To establish a connection to the device the following steps had to be performed:
 
 							bluetoothctl
@@ -343,8 +354,9 @@
 							pair xx:xx:xx:xx:xx:xx<br>
 							trust xx:xx:xx:xx:xx:xx<br>
 							connect xx:xx:xx:xx:xx<br><br>
-
-							3. A2DP support<br>
+						</li>
+						<li>
+							A2DP support<br>
 							After the connection to the device was established, the A2DP Bluetooth profile had to be set up to realize the sound output.
 
 							For this the Bluetooth sound card had to be listed: <br>
@@ -354,19 +366,28 @@
 							pacmd set-card-profile bluez_card.xx_xx_xx_xx_xx a2dp_sink<br>
 
 							After that we had to set the speaker as output audio:<br>
-							pacmd set-default-sink bluez_sink.xx_xx_xx_xx_xx.a2dp_sink</p>
+							pacmd set-default-sink bluez_sink.xx_xx_xx_xx_xx.a2dp_sink
+						</li>
+					</ol>
 							<figure class="figure docs-figure py-1">
 								<a href="assets/images/anker.jpg" data-title="Anker Soundcore 2"
 									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
 										src="assets/images/anker.jpg" alt="" style="width: 400px;"></a>
 								<figcaption class="figure-caption mt-3"></i>Anker Soundcore 2</figcaption>
 							</figure>
+						<br><a href="https://www.ebay.de/itm/384160458928?chn=ps&norover=1&mkevt=1&mkrid=707-134425-41852-0&mkcid=2&itemid=384160458928&targetid=1270839892511&device=c&mktype=pla&googleloc=9062657&poi=&campaignid=10203814797&mkgroupid=119187068301&rlsatarget=pla-1270839892511&abcId=1145991&merchantid=7364532&gclid=CjwKCAjwieuGBhAsEiwA1Ly_nZ8H26tSYDgPLlv8IY3G5h1zG3vI0s5nZawhchceeaa55tWOHVrBORoCZcEQAvD_BwE">Purchase Link</a>
 					</section>
 					<!--//section-->
 
 					<section class="docs-section" id="item-2-3">
 						<h2 class="section-heading">Gyvazla USB-microphone</h2>
-						<p>The microphone could be set up easily via a USB interface.</p>
+						<p>The microphone could be set up easily via a USB interface. For example, to use the microphone with the <a href="#item-7-7">script</a>
+							<br>One needs to get the device index<br><br>
+							>>> import pyaudio<br>
+							>>> p = pyaudio.PyAudio()<br>
+							>>> for ii in range(p.get_device_count()):<br>
+							>>>     print(p.get_device_info_by_index(ii).get('name'))<br><br>
+							<a href="https://makersportal.com/blog/2018/8/23/recording-audio-on-the-raspberry-pi-with-python-and-a-usb-microphone">Reference:</a></p>
 					</section>
 					<figure class="figure docs-figure py-1">
 						<a href="assets/images/microphone.jpg" data-title="Gyvazla USB-microphone"
@@ -374,6 +395,7 @@
 								src="assets/images/microphone.jpg#" alt="" style="width: 200px;"></a>
 						<figcaption class="figure-caption mt-3"></i>Gyvazla USB-microphone</figcaption>
 					</figure>
+					<br><a href="https://www.amazon.de/dp/B08XQ4XKWF/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B08XQ4XKWF&pd_rd_w=3Ee8H&pf_rd_p=80f139ed-36cd-4376-aa65-33f3cf0faca3&pd_rd_wg=STlDW&pf_rd_r=JZGFQ2Y37S9V6J6KHVT8&pd_rd_r=0f822a78-dc7f-491b-9ce1-f57b4017ee50&smid=A2ANY0W86ZG2O8&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE3MFM2SEJPN1dMRjUmZW5jcnlwdGVkSWQ9QTAzNDAxNjIyWU83MThQMTNOWU1GJmVuY3J5cHRlZEFkSWQ9QTAxODc4NTczSFhBNzM4QkFIOFM5JndpZGdldE5hbWU9c3BfZGV0YWlsJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==">Purchase Link</a>
 					<!--//section-->
 				</article>
 				<!--//docs-article-->
@@ -424,6 +446,12 @@
 									src="assets/images/fcm.jpeg" alt=""
 									style="width: 300px;"></a>
 							<figcaption class="figure-caption mt-3"></i></figcaption>
+						</figure><br>
+						<figure class="figure docs-figure py-1">
+							<a href="assets/images/push.png" data-title="Gyvazla USB-microphone"
+								 data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+																						 src="assets/images/push.png#" alt="" style="width: 200px;"></a>
+							<figcaption class="figure-caption mt-3"></i>Push Notification Example</figcaption>
 						</figure>
 					</section>
 					<!--//section-->
@@ -441,6 +469,14 @@
 					<section class="docs-section" id="item-4-1">
 						<h2 class="section-heading">Setting up Raspberry</h2>
 						<p>Raspberry Pi 4 with Ui was setup for the project. Vnc viewer was used to access the UI.
+							<figure class="figure docs-figure py-3">
+								<a target="_blank" href="assets/images/vnc.png"
+									 data-title="Raspberry Pi 4 Model B" data-toggle="lightbox"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/vnc.png" alt=""
+										style="width: 400px;"></a>
+								<figcaption class="figure-caption mt-3"></i>VNC Viewer</figcaption>
+							</figure>
 						</p>
 					</section>
 					<!--//section-->
@@ -538,6 +574,16 @@
 					<section class="docs-section" id="item-5-4">
 						<h2 class="section-heading">Python script to showcase features</h2>
 						<p>A python script was written to showcase all the features of the project. Below is the script: <br>
+							The process can be understood as:<br>
+						<ol>
+							<li>Libraries like pygame, pyaudio, requests, pyfcm, etc. are loaded which are helpful for the different functions</li>
+							<li>The different functions are defined namely record(record audio using the usb microphone), call_api(make request to the flask api), play(stream calm music to the bluetooth speaker), send_push(send a push notification to mobile device)</li>
+							<li>record(): This method makes a 16 bit, single channel recording, using device index 2(usb microphone) using pyaudio library and saves it into test1.wav</li>
+							<li>call_api(): https://testapi.io/api/pulkit604/dog_sound_classify is the address that is called using the requests api</li>
+							<li>play(): pygame mixer library is initialised and loaded with calm_scrott.mp3 and is then played until it finishes</li>
+							<li>send_push(): Push service is declared with api key from the fcm project, registration token of the device is set and then the push notification is sent with the details set</li>
+							<li>The script runs once and executes all the 4 functions in order</li>
+						</ol>
 							<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/all_in_one_demo2.py"></script>
 						</p>
 					</section>
@@ -570,7 +616,7 @@
 					<section class="docs-section" id="item-5-7">
 						<h2 class="section-heading">Bitrate change</h2>
 						<p>The model required audio files to be transformed into 16 bitrate sound files. Hence, the script was written which takes up all the files and converts them to a bitrate of 16.
-							<br><br><a href="#item-7-3">Link</a></p>
+							<br><br><a href="#item-7-2">Link</a></p>
 					</section>
 					<!--//section-->
 
@@ -631,7 +677,7 @@
 						<br>So, due to that fact, we only took the evaluation (for ex. <a target="_blank" href="https://research.google.com/audioset//eval/bark.html">Bark Evaluation videos</a> )and evaluation videos (for ex., <a target="_blank" href="https://research.google.com/audioset//balanced_train/bark.html">Bark Balanced Videos</a> ) for each type(avg. 100 videos for each category) in order make a model that could at least have accuracy.
 						Here, is the collection copied into an <a target="_blank" href="https://docs.google.com/spreadsheets/d/1jZxZN6x3-CqUoS3p9jMzvOOMGyxAsaIyQkZ3bTEOCaI/edit?usp=sharing">excel file.</a>
 						<br>After the collection was made, there still existed a problem of unwanted noise in the better videos too. In order to tackle this issue, we manually filtered out the audio files by listening to the audio files which weren't good for the training and deleted them one by one. We didn't go for some tool to filter it out because it wouldn't be easy to filter out dog sounds from noise as the tool could identify both as noise.
-						<br>At the end, we were left with these <a target="_blank" href="">files</a>.
+						<br>At the end, we were left with these <a target="_blank" href="https://docs.google.com/spreadsheets/d/1jZxZN6x3-CqUoS3p9jMzvOOMGyxAsaIyQkZ3bTEOCaI/edit?usp=sharing">files</a>.
 						</p>
 					</section>
 					<!--//section-->
@@ -643,7 +689,7 @@
 							<li>Firstly, the audio files were complete audios from youtube videos(2-4 minutes), it was necessary to be crop them to the timestamps provided by the audioset. This <a href="#item-7-4">script</a> was used for that.</li>
 							<li>After that, there was an issue with the audio files that it didn't support 32 bit audio files. For, that we wrote a script to convert the audio files into 16-bit wav audio files.
 								<br> The link to the script is <a href="#item-8-3">here</a>:</li>
-							<li>After, the bitrate conversion there came a new issue that the audio files had to be single channel. The script for that is attached <a href="#item-7-5">here</a>: </li>
+							<li>After, the bitrate conversion there came a new issue that the audio files had to be single channel. The script for that is attached <a href="#item-7-4">here</a>: </li>
 							<li>One more problem occured that while training the generated audio files were inconsistent in the dimensions of the spectrograms generated. These were ignored while training by writing simple ignore statement in for loops</li>
 							<li>At the end, since the number of audio files were limited, we created only two labels (yes - corresponding to a sad dog; no - not that case of a sad dog) instead of 6 categories because that anyways would be very less accurate due to the less number of files per category</li>
 							<li>Upon the successful training of the model, we were able to generate a model with not very good accuracy to distinguish between the two categorical sounds but upon a little experimentation we found out that the difference between the probability of `yes` and `no` was less than 2.1 in most cases. We later on used that observation as a deciding factor for the api</li>
@@ -655,7 +701,7 @@
 						<h2 class="section-heading">Model Deploy and Flask Server</h2>
 						<p>After the model creation, we were to decide how we could use it in an Api, which could be similar to the <a href="#item-4-5">test api</a> and could be called using python requests library. After the model was built, the size came up to be around 20 Mb.<br>
 						It was small enough to be used within the raspberry pi. So, next we tried with different versions of tensorflow that would be supported on the raspberry. After a lot of experimentation with different versions, we found version 2.4.0 to be compatible.<br>
-						<br>We created a flask server, which loads the generated model using keras <a target="_blank" href="https://www.tensorflow.org/tutorials/keras/save_and_load">load_model</a> function and sent response similar to the test api created earlier after reading the file's contents. The script can be found here: <a href="#item-7-7">Script Link</a> </p>
+						<br>We created a flask server, which loads the generated model using keras <a target="_blank" href="https://www.tensorflow.org/tutorials/keras/save_and_load">load_model</a> function and sent response similar to the test api created earlier after reading the file's contents. The script can be found here: <a href="#item-7-6">Script Link</a> </p>
 					</section>
 					<!--//section-->
 
@@ -678,62 +724,119 @@
 					<header class="docs-header">
 						<h1 class="docs-heading">Python Scripts</h1>
 						<section class="docs-intro">
-							<p>A bunch of python scripts were modified and written for various use cases ranging from downloading youtube videos to stripping audio files to a certain timestamp. </p>
+							<p>A bunch of python scripts were written and modified  for various use cases ranging from downloading youtube videos to stripping audio files to a certain timestamp or for the deep learning model. All of the scrips are described and attached below: </p>
 						</section>
 						<!--//docs-intro-->
 					</header>
 					<section class="docs-section" id="item-7-1">
-						<h2 class="section-heading">Audio classifier Model</h2>
-						<p>The below jupyter lab contains the modified code to load audio files and generate a classifier model to distinguish b/w dog related separation anxiety sound </p>
-						<a target="_blank" href="https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/simpe_audio.ipynb">Github Link</a><iframe src="assets/simple_audio.html" width="100%" height="50%" ></iframe></a>
-					</section>
-					<!--//section-->
-					<section class="docs-section" id="item-7-2">
 						<h2 class="section-heading">Audioset Downloader</h2>
 						<p>The below script reads an excel file with youtube video links and fetches audio files for that and saves to folders like Bark, Yip, etc. </p>
+						The process can be understood as:<br>
+						<ol>
+							<li>An excel file with rows in the form->  category_id  audio_id start_timestamp end_timestamp is read using pandas.</li>
+							<li>The pafy library is then used to fetch the youtube video and get the audio track from it and saved in the format "./" + category +  '/' + f'{audio_id}_start_{start_time}_end_{end_time}{bestaudio.extension}</li>
+							<li>ffmpy is used to convert the audio, if the file is not in wav format</li>
+						</ol>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/audioset-downloader.py"></script>
 					</section>
 					<!--//section-->
 
-					<section class="docs-section" id="item-7-3">
+					<section class="docs-section" id="item-7-2">
 						<h2 class="section-heading">Bitrate Converter</h2>
 						<p>The below script takes audio files and converts them a bitrate of 16.</p>
+						The process can be understood as:<br>
+						<ol>
+							<li>Using Os library the files existing in the six folders(Bark, Yip, etc.) are listed</li>
+							<li>After that the files are read using soundfile library simultaneously </li>
+							<li>The files are then converted to PCM_16 which is a 16 bitrate format supported by the library and saved</li>
+						</ol>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/bitrate_convert.py"></script>
 					</section>
 					<!--//section-->
 
-					<section class="docs-section" id="item-7-4">
+					<section class="docs-section" id="item-7-3">
 						<h2 class="section-heading">Crop From Timestamp</h2>
 						<p>The below script takes audio files and crops them to the start and endtimestamp mentioned in the file name like _fTONy_pqik_start_[start_timestamp]_end_[end_timestamp].wav</p>
+						The process can be understood as:<br>
+						<ol>
+							<li>Using Os library the files existing in the six folders(Bark, Yip, etc.) are listed</li>
+							<li>The names are split into link, start time, end time</li>
+							<li>The files are loaded using AudioSegment library</li>
+							<li>The cropped parts are taken like -> song[int(st)*1000:int(et)*1000], where st is the start time and et is the end time; 1000 is multiplied because milliseconds is the expected format</li>
+							<li>At the end, the cropped parts saved by export function</li>
+						</ol>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/crop_from_timestamp.py"></script>
 					</section>
 					<!--//section-->
 
-					<section class="docs-section" id="item-7-5">
+					<section class="docs-section" id="item-7-4">
 						<h2 class="section-heading">Set Mono Sound Channel</h2>
 						<p>To work with the model it was required that the audio files be single channel audio files. The below script does that function.</p>
+						The process can be understood as:<br>
+						<ol>
+							<li>Using Os library the files existing in the six folders(Bark, Yip, etc.) are listed</li>
+							<li>The files are loaded using AudioSegment library</li>
+							<li>The channel is changed by `set_channels(1)`</li>
+							<li>At the end, the cropped parts saved by export function</li>
+						</ol>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/set_sound_channel_mono.py"></script>
 					</section>
 					<!--//section-->
 
-					<section class="docs-section" id="item-7-6">
+					<section class="docs-section" id="item-7-5">
 						<h2 class="section-heading">Strip to 9 Seconds</h2>
 						<p>There was a problem when generating the audio files to spectrogram images, that the images need to be of the same dimensions when training the model. Thus, the below script makes it possible to strip the audio files to the same duration of 9 seconds. </p>
+						The process can be understood as:<br>
+						<ol>
+							<li>Using Os library the files existing in the six folders(Bark, Yip, etc.) are listed</li>
+							<li>The cropped parts are taken like -> 0:9000]</li>
+							<li>At the end, the cropped parts saved by export function</li>
+						</ol>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/strip_9_sec.py"></script>
 					</section>
 					<!--//section-->
 
-					<section class="docs-section" id="item-7-7">
+					<section class="docs-section" id="item-7-6">
 						<h2 class="section-heading">Flask server</h2>
-						<p>There was a problem when generating the audio files to spectrogram images, that the images need to be of the same dimensions when training the model. Thus, the below script makes it possible to strip the audio files to the same duration of 9 seconds. </p>
+						<p>The below script is the flask server application used to analyse the recorded file and respond with true or false according to the logic if the difference between the probability of `yes` and `no` is less than 2.1</p>
+						The process can be understood as:<br>
+						<ol>
+							<li>Flask and tensorflow are the major libraries that are imported</li>
+							<li>A flask app is declared</li>
+							<li>Then a route is declared which would be accessible by a browser or using python's request library by http://127.0.0.0:5001/check</li>
+							<li>The CNN model is loaded using keras' load_model function</li>
+							<li>The recorded file test1.wav is tested with the model</li>
+							<li>From the prediction made by the model, the difference of probabilities of yes and no is calculated and true is return as a response if the difference is less than 0.21 else false otherwise</li>
+						</ol>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/flask_app.py"></script>
 					</section>
 					<!--//section-->
 
-					<section class="docs-section" id="item-7-8">
+					<section class="docs-section" id="item-7-7">
 						<h2 class="section-heading">Final script for raspberry pi</h2>
-						<p>There was a problem when generating the audio files to spectrogram images, that the images need to be of the same dimensions when training the model. Thus, the below script makes it possible to strip the audio files to the same duration of 9 seconds. </p>
+						<p>The final script which records, checks the recording, plays music and sends push notifications is attached below.</p>
+						The process can be understood as:<br>
+						<ol>
+							<li>Libraries like pygame, pyaudio, requests, pyfcm, etc. are loaded which are helpful for the different functions</li>
+							<li>The different functions are defined namely record(record audio using the usb microphone), call_api(make request to the flask api), play(stream calm music to the bluetooth speaker), send_push(send a push notification to mobile device)</li>
+							<li>record(): This method makes a 16 bit, single channel recording, using device index 2(usb microphone) using pyaudio library and saves it into test1.wav</li>
+							<li>call_api(): http://127.0.0.1:5000/check is the address that is called using the requests api</li>
+							<li>play(): pygame mixer library is initialised and loaded with calm_scrott.mp3 and is then played until it finishes</li>
+							<li>send_push(): Push service is declared with api key from the fcm project, registration token of the device is set and then the push notification is sent with the details set</li>
+							<li>The script runs until exit() function is called or is stopped manually using ctrl+c, for example.</li>
+							<li>Starting step is recording of music file, the file is saved to test1.wav and is of 9 seconds</li>
+							<li>The flask api is called and if the result has 'True', the count of times(the no. of trues) is increased; calm music is played</li>
+							<li>After that process repeats itself until a 'True' response comes again</li>
+							<li>When a second time 'True' comes, calm music is played and a push notification is sent to the mobile device and also the script is stopped from executing further by using exit() function</li>
+							</ol>
 						<script src="http://gist-it.appspot.com/https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/all_in_one.py"></script>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-7-8">
+						<h2 class="section-heading">Audio classifier Model</h2>
+						<p>The below jupyter lab contains the modified code to load audio files and generate a classifier model to distinguish b/w dog related separation anxiety sound </p>
+						<a target="_blank" href="https://github.com/pulkit604/dogMonitorDocs/blob/master/python_scripts/simpe_audio.ipynb">Github Link</a><iframe src="assets/simple_audio.html" width="100%" height="50%" ></iframe></a>
 					</section>
 					<!--//section-->
 				</article>
@@ -772,9 +875,11 @@
 							<ul>
 								<li><a href="https://www.python.org/">Python Official Site</a></li>
 								<li><a href="https://www.tensorflow.org/">Tensorflow Official Site</a></li>
+								<li><a href="https://wiki.debian.org/PulseAudio">Pulse audio wiki</a></li>
 								<li><a href=https://firebase.google.com/docs/cloud-messaging"">Firebase Cloud Messaging Introduction</a></li>
 								<li><a href="https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Headset_Profile_(HSP)">Bluetooth Profiles</a></li>
 								<li><a href="https://research.google.com/audioset/ontology/dog_1.html">Google Research Dog Sound Dataset</a></li>
+								<li><a href="https://makersportal.com/blog/2018/8/23/recording-audio-on-the-raspberry-pi-with-python-and-a-usb-microphone">Recording Audio on the Raspberry Pi with Python and a USB Microphone</a></li>
 								<li><a href="https://testapi.io/">Testapi - Mock Api Tool</a></li>
 								<li><a href="https://github.com/GianlucaPaolocci/Sound-classification-on-Raspberry-Pi-with-Tensorflow">Urban Sound Classifier Project</a></li>
 								<li><a href=https://teachablemachine.withgoogle.com/"">Teachable Machine Project by Google</a></li>
@@ -784,6 +889,7 @@
 								<li><a href="https://github.com/sunzhongbai/audioset-downloader">Audioset Downloader Project</a></li>
 								<li><a href="https://github.com/jiaaro/pydub">Audio Manipulation Library</a></li>
 								<li><a href="https://pypi.org/project/pyfcm/">Python Package to send Push Notifications</a></li>
+								<li><a href="https://www.youtube.com/results?search_query=calm+music+dog">Youtube Search Query for Calming Music for Dogs</a></li>
 							</ul>
 						</section>
 						<!--//docs-intro-->
