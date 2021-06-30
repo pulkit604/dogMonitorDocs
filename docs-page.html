@@ -127,7 +127,7 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-4">Set Mono Sound Channel</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-5">Strip to 9 Seconds</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-6">Flask server</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-7">Final script for raspberry pi</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-7">Final script for Raspberry Pi</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-8">Audio classifier Model</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span
 							class="theme-icon-holder mr-2"><i class="fas fa-microscope"></i></span>Observations and Future Scope</a>
@@ -192,8 +192,8 @@
 							the dog while he is alone at home. The Smart Dog Monitor is designed to detect the dog's
 							emotional state based on the sounds it makes (barking, growling, yelping, etc.) and play
 							calming music accordingly. If this calming music does not work, the dog owner will be
-							notified by a push notification on his cell phone. The detection of the emotional state is
-							done by a machine learning model that works on the concept of sound classification. The Raspberry PI was used
+							notified by a push notification on his smartphone. The detection of the emotional state is
+							done by a machine learning model that works on the concept of sound classification. The Raspberry Pi was used
 							as the main device here along with a usb microphone and a bluetooth speaker. </p>
 
 
@@ -202,7 +202,7 @@
 
 					<section class="docs-section" id="item-1-2">
 						<h2 class="section-heading">Software Architecture and Workflow</h2>
-						<p>Here is an overview of the Software architecture and Worflow of the project.</p>
+						<p>Here is an overview of the Software architecture and Worflow of the project:</p>
 						<figure class="figure docs-figure py-3">
 							<a href="assets/images/Workflow.png"
 								data-title="Software Architecture and Workflow" data-toggle="lightbox"><img
@@ -210,8 +210,7 @@
 									src="assets/images/Workflow.png" alt=""
 									style="width: 400px;"></a>
 						</figure>
-						<p>The Workflow of the project is as follows: </p>
-						<p>1. Here the noises of the dog are constantly listened to and stored via a microphone, which is connected to the Raspberry Pi. The sound recording is listened to and processed in the Raspberry Pi using Tensorflow, which is deployed on a Flask server.<br> </p>
+						<p>1. Here the noises of the dog are constantly listened to and stored via a microphone, which is connected to the Raspberry Pi. The sound recording is listened to and processed in the Raspberry Pi using Tensorflow, which is served on a Flask server.<br> </p>
 						<p>2. When an anxious behavior of the dog is classified, an API call is made and calming music for the dog is played through the Bluetooth speakers. </p>
 						<p>Steps 1 and 2 are repeated again if the dog is still making the sounds. </p>
 						<p>3. If the dog does not calm down, a push notification is sent to the dog owner's smartphone via Firebase Cloud Messaging, informing them that the dog is showing unusual behavior.</p>
@@ -300,7 +299,7 @@
 					</header>
 					<section class="docs-section" id="item-2-1">
 						<h2 class="section-heading">Raspberry Pi 4 B</h2>
-						<p>The Raspberry Pi 4 was used as the main device here. One of the major reason to choose a raspberry pi device was that we needed to use Tensorflow in our project for deep learning which is not widely available for micro-controllers but has recently been made compatible with certain models with high performance capabilities.</p>
+						<p>The Raspberry Pi 4 was used as the main device here. One of the major reason to choose a Raspberry Pi device was that we needed to use Tensorflow in our project for deep learning which is not widely available for micro-controllers but has recently been made compatible with certain models with high performance capabilities.</p>
 						<figure class="figure docs-figure py-3">
 							<a href="assets/images/Raspberry_Pi_4_Model_B_-_Side.jpeg"
 								data-title="Raspberry Pi 4 Model B" data-toggle="lightbox"><img
@@ -342,12 +341,12 @@
 						</li>
 						<li>
 							Bluetooth connection<br>
-							To establish a connection to the device the following steps had to be performed:
+							To establish a connection to the device the following steps had to be performed:<br><br>
 
-							bluetoothctl
-							power on
-							agent on
-							default-agent
+							bluetoothctl<br>
+							power on<br>
+							agent on<br>
+							default-agent<br><br>
 
 							Then we found out the MAC address and could connect the device.<br>
 							pair xx:xx:xx:xx:xx:xx<br>
@@ -358,13 +357,13 @@
 							A2DP support<br>
 							After the connection to the device was established, the A2DP Bluetooth profile had to be set up to realize the sound output.
 
-							For this the Bluetooth sound card had to be listed: <br>
-							pacmd list-cards <br>
+							For this the Bluetooth sound card had to be listed: <br><br>
+							pacmd list-cards <br><br>
 
-							The Bluetooth sound card was on index #1 and now we had to enable A2DP:<br>
-							pacmd set-card-profile bluez_card.xx_xx_xx_xx_xx a2dp_sink<br>
+							The Bluetooth sound card was on index #1 and now we had to enable A2DP:<br><br>
+							pacmd set-card-profile bluez_card.xx_xx_xx_xx_xx a2dp_sink<br><br>
 
-							After that we had to set the speaker as output audio:<br>
+							After that we had to set the speaker as output audio:<br><br>
 							pacmd set-default-sink bluez_sink.xx_xx_xx_xx_xx.a2dp_sink
 						</li>
 					</ol>
@@ -386,7 +385,7 @@
 							>>> p = pyaudio.PyAudio()<br>
 							>>> for ii in range(p.get_device_count()):<br>
 							>>>     print(p.get_device_info_by_index(ii).get('name'))<br><br>
-							<a href="https://makersportal.com/blog/2018/8/23/recording-audio-on-the-raspberry-pi-with-python-and-a-usb-microphone">Reference:</a></p>
+							<a href="https://makersportal.com/blog/2018/8/23/recording-audio-on-the-raspberry-pi-with-python-and-a-usb-microphone">Reference</a></p>
 					</section>
 					<figure class="figure docs-figure py-1">
 						<a href="assets/images/microphone.jpg" data-title="Gyvazla USB-microphone"
@@ -447,7 +446,7 @@
 					</header>
 					<section class="docs-section" id="item-3-1">
 						<h2 class="section-heading">Python</h2>
-						<p>Python is a programming language that lets you work more quickly and integrate your systems more effectively <a target="_blank" href="https://www.python.org/">[1]</a> We decided to use Python for our project since there were various technologies to be used in the project. Since, it is not feasible to use different programming languages for one project that need to be interpolated with different techniques. </p>
+						<p>Python is a programming language that lets you work more quickly and integrate your systems more effectively. <a target="_blank" href="https://www.python.org/">[1]</a> We decided to use Python for our project since there were various technologies to be used in the project. Since, it is not feasible to use different programming languages for one project that need to be interpolated with different techniques. </p>
 						<figure class="figure docs-figure py-3">
 							<a target="_blank" href="https://www.python.org/"
 								 data-title="Python" data-toggle="lightbox"><img
@@ -504,7 +503,7 @@
 					</header>
 					<section class="docs-section" id="item-4-1">
 						<h2 class="section-heading">Setting up Raspberry</h2>
-						<p>Raspberry Pi 4 with Ui was setup for the project. Vnc viewer was used to access the UI.
+						<p>Raspberry Pi 4 with UI was setup for the project. Vnc viewer was used to access the UI.
 							<figure class="figure docs-figure py-3">
 								<a target="_blank" href="assets/images/vnc.png"
 									 data-title="Raspberry Pi 4 Model B" data-toggle="lightbox"><img
@@ -535,14 +534,14 @@
 
 					<section class="docs-section" id="item-4-3">
 						<h2 class="section-heading">Audio Output</h2>
-						<p>We were able to connect our bluetooth sound speaker to our raspberrypi. Following is a video showing the audio output from the raspberry to the bluetooth speaker.</p>
+						<p>We were able to connect our bluetooth sound speaker to our Raspberry Pi. Following is a video showing the audio output from the Raspberry to the bluetooth speaker.</p>
 						<iframe src="https://drive.google.com/file/d/1CwaA-6nu6auzz_elji_-Rdzjv02vYGK_/preview" width="640" height="480" allow="autoplay"></iframe>
 					</section>
 					<!--//section-->
 
 					<section class="docs-section" id="item-4-4">
 						<h2 class="section-heading">Data collection for Tensorflow</h2>
-						<p>For generating a model to classify audio we required to collect different sounds which correspond to the sounds that dogs make. We used the dataset by <a target="_blank" href="https://research.google.com/audioset/ontology/dog_1.html">research.google.com</a><br>On every category page, we grabbed the json response which contained the audio files with timestamps.<br>For example, <a target="_blank" href="https://storage.googleapis.com/audioset_website_data/youtube_corpus/v1/balanced_train/bark/1.js">https://storage.googleapis.com/audioset_website_data/youtube_corpus/v1/balanced_train/bark/1.js</a> gives a json response. We wrote a small javascript to take that response and give a list directly copeable into an <a target="_blank" href="https://docs.google.com/spreadsheets/d/1aNIikUhNj3v6oarXHSIENYtTNHg-NxNrSj4HN4miZZc/edit#gid=0">excel sheet</a></p>
+						<p>For generating a model to classify audio we required to collect different sounds which correspond to the sounds that dogs make. We used the dataset by <a target="_blank" href="https://research.google.com/audioset/ontology/dog_1.html">research.google.com</a><br>On every category page, we grabbed the json response which contained the audio files with timestamps.<br>For example, <a target="_blank" href="https://storage.googleapis.com/audioset_website_data/youtube_corpus/v1/balanced_train/bark/1.js">https://storage.googleapis.com/audioset_website_data/youtube_corpus/v1/balanced_train/bark/1.js</a> gives a json response. We wrote a small javascript to take that response and give a list directly copeable into an <a target="_blank" href="https://docs.google.com/spreadsheets/d/1aNIikUhNj3v6oarXHSIENYtTNHg-NxNrSj4HN4miZZc/edit#gid=0">excel sheet.</a></p>
 					</section>
 					<!--//section-->
 
@@ -571,8 +570,8 @@
 						<h2 class="section-heading">Problems in Demo 1</h2>
 						<p>There were a bunch of issues faced by the time of demo 1. They are listed below:<br>
 						<ul>
-						<li>Saving the audio to the raspberry pi was not possible because it doesn't allow to save input and only can play directly into the speaker.</li>
-						<li>Audio recording to raspberry wasn't possible</li>
+						<li>Saving the audio to the Raspberry Pi was not possible because it doesn't allow to save input and only can play directly into the speaker.</li>
+						<li>Audio recording to Raspberry wasn't possible</li>
 						<li>Using bluetooth device for recording and playing music wasn't successful due to A2DP and HSP protocol switching issue (Solved by using a separate usb mic for recording)</li>
 					</ul></p>
 					</section>
@@ -580,7 +579,7 @@
 
 					<section class="docs-section" id="item-5-2">
 						<h2 class="section-heading">Mic + Speaker Function</h2>
-						<p>The recording function and calm music playback function was separated out by including a <a href="#item-2-3">USB Microphone</a>. The recording then works on the usb microhphone and music playback on the bluetooth speaker. The video below shows the functioning(At first, the laptop on the left plays a dog barking sound and then the bluetooth speaker plays it backs through the recording made by the raspberrypi):</p>
+						<p>The recording function and calm music playback function was separated out by including a <a href="#item-2-3">USB Microphone</a>. The recording then works on the usb microphone and music playback on the bluetooth speaker. The video below shows the functioning(At first, the laptop on the left plays a dog barking sound and then the bluetooth speaker plays it backs through the recording made by the Raspberry Pi):</p>
 						<iframe src="https://drive.google.com/file/d/1ymgNo2kSGAjeqSbNLNABikile-GiWulC/preview" width="640" height="480" allow="autoplay"></iframe>
 					</section>
 					<!--//section-->
@@ -590,9 +589,9 @@
 						<p>The use case demontrated in demo 2 is summarized below:
 						<ol>
 						<li>Dog sounds are played from the laptop on the left hand side</li>
-						<li>Sound is recorded through the usb microphone and saved onto the raspberrypi (shown in the Python Code)</li>
+						<li>Sound is recorded through the usb microphone and saved onto the Raspberry Pi (shown in the Python Code)</li>
 						<li>After the successful recording an API call to the sample api was made(later it would me made to a flask server running tensorflow on it)</li>
-						<li>After the APi call was made, a music file containing calm music is played on the bluetooth speaker through the raspberry pi</li>
+						<li>After the APi call was made, a music file containing calm music is played on the bluetooth speaker through the Raspberry Pi</li>
 						<li>At the end, a push notification is sent onto the mobile device using FCM</li>
 					</ol></p>
 						<figure class="figure docs-figure py-3">
@@ -691,7 +690,7 @@
 					<header class="docs-header">
 						<h1 class="docs-heading">Final Version</h1>
 						<section class="docs-intro">
-							<p>After a lot of experimentation and playing around with audio files of dogs barking, we were able to generate a model and deploy it on the raspberry pi itself and serve through a flask server. Below are the detailed infos.</p>
+							<p>After a lot of experimentation and playing around with audio files of dogs barking, we were able to generate a model and deploy it on the Raspberry Pi itself and serve through a flask server. Below are the detailed infos.</p>
 						</section>
 						<!--//docs-intro-->
 					</header>
@@ -722,8 +721,8 @@
 						<h2 class="section-heading">Final Model build and results</h2>
 						<p>After we were done with filtering out the audio files and get the best set, we started with training the convolutional neural network(CNN). There were some issues when starting with training. The issues and their solutions are noted below:</p>
 						<ol>
-							<li>Firstly, the audio files were complete audios from youtube videos(2-4 minutes), it was necessary to be crop them to the timestamps provided by the audioset. This <a href="#item-7-4">script</a> was used for that.</li>
-							<li>After that, there was an issue with the audio files that it didn't support 32 bit audio files. For, that we wrote a script to convert the audio files into 16-bit wav audio files.
+							<li>Firstly, the audio files were complete audios from youtube videos(2-4 minutes), it was necessary to be crop them to the timestamps provided by the audioset. This <a href="#item-7-4">script</a> was used for that</li>
+							<li>After that, there was an issue with the audio files that it didn't support 32 bit audio files. For, that we wrote a script to convert the audio files into 16-bit wav audio files
 								<br> The link to the script is <a href="#item-8-3">here</a>:</li>
 							<li>After, the bitrate conversion there came a new issue that the audio files had to be single channel. The script for that is attached <a href="#item-7-4">here</a>: </li>
 							<li>One more problem occured that while training the generated audio files were inconsistent in the dimensions of the spectrograms generated. These were ignored while training by writing simple ignore statement in for loops</li>
@@ -736,7 +735,7 @@
 					<section class="docs-section" id="item-6-3">
 						<h2 class="section-heading">Model Deploy and Flask Server</h2>
 						<p>After the model creation, we were to decide how we could use it in an Api, which could be similar to the <a href="#item-4-5">test api</a> and could be called using python requests library. After the model was built, the size came up to be around 20 Mb.<br>
-						It was small enough to be used within the raspberry pi. So, next we tried with different versions of tensorflow that would be supported on the raspberry. After a lot of experimentation with different versions, we found version 2.4.0 to be compatible.<br>
+						It was small enough to be used within the Raspberry Pi. So, next we tried with different versions of tensorflow that would be supported on the raspberry. After a lot of experimentation with different versions, we found version 2.4.0 to be compatible.<br>
 						<br>We created a flask server, which loads the generated model using keras <a target="_blank" href="https://www.tensorflow.org/tutorials/keras/save_and_load">load_model</a> function and sent response similar to the test api created earlier after reading the file's contents. The script can be found here: <a href="#item-7-6">Script Link</a> </p>
 					</section>
 					<!--//section-->
@@ -859,7 +858,7 @@
 					<!--//section-->
 
 					<section class="docs-section" id="item-7-7">
-						<h2 class="section-heading">Final script for raspberry pi</h2>
+						<h2 class="section-heading">Final script for Raspberry Pi</h2>
 						<p>The final script which records, checks the recording, plays music and sends push notifications is attached below.</p>
 						The process can be understood as:<br>
 						<ol>
@@ -895,16 +894,16 @@
 							Some issues that we faced during the working time of project:
 							<ul>
 								<li>The audio set had a weak labelling of the different sound categories.</li>
-								<li>The majority of the sound files had terrible noises(people talking, shouting, musical instruments) in the background</li>
-								<li>The audio files didn't have similar pattern as in, some had 3-4 seconds silence and then a sound or the other way round</li>
+								<li>The majority of the sound files had terrible noises(people talking, shouting, musical instruments) in the background.</li>
+								<li>The audio files didn't have similar pattern as in, some had 3-4 seconds silence and then a sound or the other way round.</li>
 								<li>There had to be done a manual filtering of the audio files by listening to them manually which takes a lot of time.</li>
 								<li>For the model to accept the audios there had to be done a lot of operations like bitrate change, stereo->mono channel change which makes the final files a lot different from the original sound.</li>
 							</ul>
 							<br>There can be a lot of amendments possible with the project structure created using a better audio dataset.
 							<ul>
 								<li>If there can be added the factor of pitch from the audio files, it would be easier to have better accuracy since the sad sounds are generally told be of lower pitch than otherwise.</li>
-								<li>If there could be a dataset which consists of sounds without noise, it would be easier to get better results</li>
-								<li>Since, there exists a wide variety of breeds of dogs, the project could be expanded by grouping some breeds of dogs that make similar sounds</li>
+								<li>If there could be a dataset which consists of sounds without noise, it would be easier to get better results.</li>
+								<li>Since, there exists a wide variety of breeds of dogs, the project could be expanded by grouping some breeds of dogs that make similar sounds.</li>
 								<li>Since, there are similar situations with little kids and babies. If there exists or would exist a dataset of small children crying, the same project could be used just by altering the audio files and could be directly utilized.</li>
 							</ul>
 						</section>
