@@ -692,7 +692,7 @@
 							<li>After, the bitrate conversion there came a new issue that the audio files had to be single channel. The script for that is attached <a href="#item-7-4">here</a>: </li>
 							<li>One more problem occured that while training the generated audio files were inconsistent in the dimensions of the spectrograms generated. These were ignored while training by writing simple ignore statement in for loops</li>
 							<li>At the end, since the number of audio files were limited, we created only two labels (yes - corresponding to a sad dog; no - not that case of a sad dog) instead of 6 categories because that anyways would be very less accurate due to the less number of files per category</li>
-							<li>Upon the successful training of the model, we were able to generate a model with not very good accuracy to distinguish between the two categorical sounds but upon a little experimentation we found out that the difference between the probability of `yes` and `no` was less than 2.1 in most cases. We later on used that observation as a deciding factor for the api</li>
+							<li>Upon the successful training of the model, we were able to generate a model with not very good accuracy to distinguish between the two categorical sounds but upon a little experimentation we found out that the difference between the probability of `yes` and `no` was less than 0.21 in most cases. We later on used that observation as a deciding factor for the api</li>
 						</ol>
 					</section>
 					<!--//section-->
@@ -714,7 +714,17 @@
 
 					<section class="docs-section" id="item-6-5">
 						<h2 class="section-heading">Final Demo</h2>
-						<p>Below is a final working of the functioning of the project:<br></p>
+						<p>Below is a final working of the functioning of the project. The process is as follows:
+						<ol>
+						<li>First of all, the flask server which used tensorflow loaded model is started</li>
+						<li>Next, we run the continous running script which starts by recording sound which comes from the laptop connected on the right,</li>
+						<li>Then, the api from flask server is called and since, the result is True,</li>
+						<li>Calm music is played onto the bluetooth speaker</li>
+						<li>Now, the script repeats the process of recording and calling api, </li>
+						<li>Then the result is again True so calm music is played as well a push notification is sent on the mobile device</li>
+						<li>After that the script stops running</li>
+					</ol><br>
+						<iframe src="https://drive.google.com/file/d/1jLOuuMB_7veu7Kz_LhQhAHGIz5FpAUAH/preview" width="640" height="480" allow="autoplay"></iframe><br></p>
 					</section>
 					<!--//section-->
 				</article>
@@ -798,7 +808,7 @@
 
 					<section class="docs-section" id="item-7-6">
 						<h2 class="section-heading">Flask server</h2>
-						<p>The below script is the flask server application used to analyse the recorded file and respond with true or false according to the logic if the difference between the probability of `yes` and `no` is less than 2.1</p>
+						<p>The below script is the flask server application used to analyse the recorded file and respond with true or false according to the logic if the difference between the probability of `yes` and `no` is less than 0.21</p>
 						The process can be understood as:<br>
 						<ol>
 							<li>Flask and tensorflow are the major libraries that are imported</li>
